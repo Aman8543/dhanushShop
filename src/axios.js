@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = await axios.create({
-    baseURL: 'http://localhost:2500',
+    baseURL: 'https://dhanush-backend.onrender.com',
     withCredentials:true,
     headers: {
         'Content-Type': 'application/json'
