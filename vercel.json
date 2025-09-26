@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://dhanush-backend.onrender.com/:path*"
+    }
+  ]
+}
