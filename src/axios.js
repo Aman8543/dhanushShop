@@ -10,4 +10,3 @@ const axiosClient = await axios.create({
 
 export default axiosClient;
 
-// 

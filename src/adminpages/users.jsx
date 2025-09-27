@@ -32,7 +32,7 @@ export default function UsersPage() {
   }, []);
 
   return (
-    <div className="p-6">
+    <div className="p-6 mb-30">
       <h1 className="text-3xl font-bold text-center mb-6 text-white">Users</h1>
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {users.map((user,ind) => (
