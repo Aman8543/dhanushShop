@@ -43,7 +43,8 @@ const ProductForm = () => {
       const response = await axiosClient.post("/product/createProduct", formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
-        }
+        },
+        withCredentials: true
       });
 
       await new Promise(resolve => setTimeout(resolve, 1500));

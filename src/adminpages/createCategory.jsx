@@ -5,7 +5,7 @@ import axiosClient from '../axios';
 
 const CategoryForm = () => {
  
-  const token = localStorage.getItem("token");
+  
 
   const [categoryName, setCategoryName] = useState('');
   const [description, setDescription] = useState('');
@@ -55,9 +55,9 @@ const CategoryForm = () => {
     try {
       const response = await axiosClient.post("/category/createCategory", formData, {
         headers: {
-           Authorization: `Bearer ${token}`,
-          'Content-Type': 'multipart/form-data'
-        }
+          'Content-Type': 'multipart/form-data',
+        },
+        withCredentials: true
       });
 
       setSubmitStatus('success');
