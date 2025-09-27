@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import axiosClient from '../axios';
 
 const CategoryForm = () => {
+ 
+  const token = localStorage.getItem("token");
+
   const [categoryName, setCategoryName] = useState('');
   const [description, setDescription] = useState('');
   const [image, setImage] = useState(null);
@@ -52,6 +55,7 @@ const CategoryForm = () => {
     try {
       const response = await axiosClient.post("/category/createCategory", formData, {
         headers: {
+           Authorization: `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'
         }
       });
@@ -132,7 +136,7 @@ const CategoryForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-base-200 flex items-center justify-center p-4 -mt-12 ">
+    <div className="min-h-screen bg-base-200 flex mb-30 items-center justify-center p-4 -mt-12 ">
       <div className="card w-full max-w-md bg-base-100 shadow-xl">
         <div className="card-body">
           <div className="flex justify-between items-center mb-2">

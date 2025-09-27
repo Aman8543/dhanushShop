@@ -1,4 +1,5 @@
 import axios from "axios";
+const token = localStorage.getItem("token");
 
 const axiosClient = await axios.create({
     baseURL: 'https://dhanush-backend.onrender.com',
@@ -10,3 +11,4 @@ const axiosClient = await axios.create({
 
 export default axiosClient;
 
+// 
