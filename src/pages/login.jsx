@@ -28,7 +28,9 @@ function Login(){
       }
     }, [isAuthenticated, navigate]);
 
-    const onSubmit=(data) => dispatch(loginUser(data));
+    const onSubmit=(data) =>{
+     
+       dispatch(loginUser(data))};
     
     return (
  <form 
